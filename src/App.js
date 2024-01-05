@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* <Profile/> */}
-        {/* <Counter/> */}
+        <Counter/>
         <NameCard name="Bob" age={30} gender="male" />
         <NameCard name="Alice" age={25} gender="female" />
         {/* <Student/> */}
