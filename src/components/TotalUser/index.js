@@ -1,51 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const UserForm = ({ onFormSubmit }) => {
-        // Do người dùng nhập nên giá trị ban đầu là rỗng
-    // Riêng gender là giới tính nên để mặt định là male
-    const [name, setName] = useState('');
-    const [age, setAge] = useState('');
-    const [gender, setGender] = useState('male');
+const TotalUser = ({ users }) => {
+  // Tính tổng số users
+  const totalUsers = users.length;
 
-    const handleSubmit = () => {
-        // Kiểm tra xem có giá trị nhập vào hay không
-        if (name.trim() === '' || age.trim() === '') {
-            alert('Vui lòng nhập đầy đủ thông tin.');
-            return;
-        }
+  // Tính tổng tuổi của tất cả users
+  const totalAge = users.reduce((acc, user) => acc + parseInt(user.age), 0);
 
-        // Mục đích của hành động này là thông báo cho component cha (ở đây là App) về việc có một user mới được thêm vào.
-        onFormSubmit({ name, age: parseInt(age), gender });
+  // Tính số lượng male và female
+  const maleCount = users.filter(user => user.gender === 'male').length;
+  const femaleCount = users.filter(user => user.gender === 'female').length;
 
-        // reset lại form để khi thêm người dùng ko cần xóa bỏ dữ liệu cũ
-        setName('');
-        setAge('');
-        setGender('male');
-    };
-
-    return (
-        <div>
-            <div>
-                <label>Name: </label>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-            </div>
-
-            <div>
-                <label>Age: </label>
-                <input type="number" value={age} onChange={(e) => setAge(e.target.value)} />
-            </div>
-
-            <div>
-                <label>Gender: </label>
-                <select value={gender} onChange={(e) => setGender(e.target.value)}>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-
-            <button onClick={handleSubmit}>Submit</button>
-        </div>
-    );
+  return (
+    <div>
+      <h2>Total Users: {totalUsers}</h2>
+      <p>Total Age: {totalAge}</p>
+      <p>Total Male: {maleCount}</p>
+      <p>Total Female: {femaleCount}</p>
+    </div>
+  );
 };
 
-export default UserForm;
+export default TotalUser;
