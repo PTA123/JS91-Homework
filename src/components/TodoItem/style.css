@@ -1,0 +1,70 @@
+
+.task {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 480px;
+    max-width: 480px;
+  }
+  
+  .completed-task {
+    background-color: #e0e0e0; /* Màu nền khi công việc đã hoàn thành */
+  }
+  
+  .task-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .item-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .check-left {
+    margin-right: 8px;
+  }
+  
+  .name-todo {
+    text-decoration: none;
+    color:black;
+  }
+  
+  .completed {
+    text-decoration: line-through; /* Gạch ngang khi công việc đã hoàn thành */
+    color: #888; /* Màu chữ khi công việc đã hoàn thành */
+  }
+  
+  .item-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .num-todo {
+    margin-right: 8px;
+    color:black;
+    color: #888;
+  }
+  
+  .num-count {
+    font-weight: bold;
+  }
+  
+  .btn-deleted button {
+    background-color: #ff5050;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  
+  .btn-deleted button:hover {
+    background-color: #ff1a1a;
+  }
+  

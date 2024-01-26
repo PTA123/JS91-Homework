@@ -1,0 +1,81 @@
+
+
+.add-todo {
+    margin-top: 20px;
+  }
+  
+  .show-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 480px;
+  }
+  
+  .add-cm {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-inp {
+    width: 100%;
+  }
+  
+  .inp-todo {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .btn-scd {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-cancel,
+  .btn-save {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .btn-cancel {
+    background-color: #e74c3c;
+  }
+  
+  .btn-add {
+    background-color:rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.4);
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 65px;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-add.hover{
+    background-color:beige;
+  }
+  
+  .sc-add {
+    margin-left: 8px;
+  }
+  
+  /* Styles for the icon (assuming you're using FontAwesome) */
+  .fa-circle-plus {
+    margin-right: 8px;
+  }
+  
