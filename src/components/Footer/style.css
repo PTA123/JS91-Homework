@@ -1,0 +1,14 @@
+.footer {
+    padding: 20px;
+    background-color: #f0f0f0; /* Màu nền mặc định cho chủ đề sáng */
+    color: #333; /* Màu văn bản mặc định cho chủ đề sáng */
+    text-align: center;
+  }
+  
+  .footer.dark {
+    background-color: #333; /* Màu nền cho chủ đề tối */
+    color: #fff; /* Màu văn bản cho chủ đề tối */
+  }
+  
+  /* Các quy tắc CSS khác có thể được thêm vào tùy thuộc vào yêu cầu thiết kế cụ thể của bạn */
+  
